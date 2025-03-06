@@ -1,13 +1,13 @@
 from re import fullmatch
 from datetime import datetime
 from time import sleep
-from os import system
+import os
 
 # ====================== Helper Functions ====================== #
 
 def print_delay_alone(msg:str="", delay:int=0, alone:bool=False):
   if (alone):
-    system("cls")
+    os.system("cls" if os.name == "nt" else "clear")
   if (len(msg) > 0):
     print(msg)
   if (delay > 0):
@@ -147,7 +147,7 @@ def create_project(user_email):
   print_delay_alone(msg="Project created successfully !!!", delay=2, alone=True)
 
 def view_projects(user_email):
-  system('cls')
+  print_delay_alone(alone=True)
   try:
     print("\n========== All Projects ==========\n")
     with open("projects.txt", "r") as file:
@@ -250,7 +250,7 @@ def main_menu():
 
 def user_menu(user_email):
   while True:
-    system('cls')
+    print_delay_alone(alone=True)
     print("\n========== User Menu ==========\n")
     print("1) Create Project")
     print("2) View All Projects")
