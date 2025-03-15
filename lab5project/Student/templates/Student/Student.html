@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Page</title>
+</head>
+<body>
+  <h1>Hola Hola at the student info</h1>
+  {% for key, value in Student_data.items %}
+  <h2>{{ key }} : {{ value }}</h2>
+  <hr>
+  <br>
+  {% endfor %}
+</body>
+</html>

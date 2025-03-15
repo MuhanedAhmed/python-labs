@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Students</title>
+</head>
+<body>
+  <h1>This is all available students</h1>
+  {% for student in Students_data %}
+  <h2>
+    <a href="http://localhos:8000/student/{{ student.id }}">
+      {{ student.name }}
+    </a>
+  </h2>
+  <hr>
+  <br>
+  {% endfor %}
+</body>
+</html>
